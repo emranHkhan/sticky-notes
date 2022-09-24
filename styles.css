@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: #7C4DFF;
+}
+
+.note-container {
+  display: grid;
+  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 20px;
+}
+
+.note {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.add-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 100%;
+  height: 170px;
+  padding: 5px;
+  border: none;
+  overflow: auto;
+  outline: none;
+  /* border: 2px solid; */
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 5px;
+  resize: none; 
+}
+
+.dlt-btn{
+  background-color: transparent;
+  width: 30px;
+  border: 0;
+  margin: 2px 0 0 170px;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.trash {
+  color: #e91e63;
+  font-size: 1.5rem;
+}
+
+.plus {
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.time {
+  position: absolute;
+  bottom: 4px;
+  width: 80px;
+  font-size: 0.8rem;
+  background-color: #e91e63;
+  color: white;
+  padding: 2px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+  user-select: none;
+}
+
+.note:hover .dlt-btn, .note:hover .time {
+  transform: translateX(0);
+}
